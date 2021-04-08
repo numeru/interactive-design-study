@@ -69,17 +69,25 @@ body.before-load {
 
 .scroll-section {
   padding-top: 50vh;
-  border: 1px solid red;
 }
 
 #scroll-section-0 h1 {
+  position: relative;
+  top: -10vh;
+  z-index: 5;
   font-size: 4rem;
   text-align: center;
 }
 
 .sticky-elem-canvas {
   top: 0;
-  background: gray;
+  height: 100%;
+}
+
+.sticky-elem-canvas canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 .main-message {
@@ -218,6 +226,8 @@ body.before-load {
 
   .desc-message {
     width: 20%;
+    font-weight: bold;
+    opacity: 0;
   }
 
   .mid-message {
